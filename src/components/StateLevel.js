@@ -1,14 +1,14 @@
 import { useContext, useState } from "react";
 import Question from "./Question";
 import { QuizContext } from "../contexts/quiz";
-import StateLevel from "./StateLevel";
 
-const Quiz = () => {
+const StateLevels = () => {
   const [quizState, dispatch] = useContext(QuizContext);
-  const [level, setLevel] = useState(true);
+  const [level, setLevel] = useState(true); 
+
   return (
     <div className="quiz">
-      { (
+      { ( 
         quizState.showResults && (
           <div className="results">
             <div className="congratulations">Congratulations!</div>
@@ -30,12 +30,10 @@ const Quiz = () => {
       )}
       {!quizState.showResults && (
         <div>
-       {quizState.currentQuestionIndex > 1 && 
-        <div className="score">
-            Question {quizState.currentQuestionIndex - 1}/
-            {quizState.questions.length - 2}
-          </div>
-          }
+        {  <div className="score">
+            Questions {quizState.currentQuestionIndex + 1}/
+            {quizState.questions.length}
+          </div>}
           <Question />
           {quizState.currentAnswer && (
             <div
@@ -51,4 +49,4 @@ const Quiz = () => {
   );
 };
 
-export default Quiz;
+export default StateLevels;

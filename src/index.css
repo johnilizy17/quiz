@@ -53,10 +53,18 @@ div {
 }
 
 .answers {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: block;
   margin-top: 50px;
+}
+
+@media only screen and (min-width: 800px) {
+  .answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  
 }
 
 .answer-letter {

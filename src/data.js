@@ -1,5 +1,24 @@
 const data = [
   {
+    question: "Difficulty level?",
+    incorrectAnswers: [
+      "Easy",
+      "Medium",
+      "Hard",
+    ],
+    correctAnswer: "Very Hard",
+  },
+  {
+    question: "Subject/category ?",
+    incorrectAnswers: [
+      "Mathematics",
+      "History",
+      "Science",
+    ],
+    correctAnswer: "Art",
+  },
+
+  {
     question: "What does CSS stand for?",
     incorrectAnswers: [
       "Computer Style Sheets",
