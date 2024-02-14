@@ -15,7 +15,7 @@ const Quiz = () => {
             <div className="results-info">
               <div>You have completed the quiz.</div>
               <div>
-                You've got {quizState.correctAnswersCount} of &nbsp;
+                You've got {quizState.correctAnswersCount> 8 ? quizState.correctAnswersCount - 2 : quizState.correctAnswersCount} of &nbsp;
                 {quizState.questions.length - 2} right.
               </div>
             </div>
