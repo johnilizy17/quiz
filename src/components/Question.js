@@ -5,6 +5,7 @@ import { QuizContext } from "../contexts/quiz";
 const Question = () => {
   const [quizState, dispatch] = useContext(QuizContext);
   const currentQuestion = quizState.questions[quizState.currentQuestionIndex];
+  
   return (
     <div>
       <div className="question">{currentQuestion.question}</div>
@@ -16,6 +17,7 @@ const Question = () => {
             correctAnswer={currentQuestion.correctAnswer}
             key={index}
             index={index}
+            control={currentQuestion.control}
             onSelectAnswer={(answerText) =>
               dispatch({ type: "SELECT_ANSWER", payload: answerText })
             }

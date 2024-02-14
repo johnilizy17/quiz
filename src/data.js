@@ -7,15 +7,17 @@ const data = [
       "Hard",
     ],
     correctAnswer: "Very Hard",
+    control: true
   },
   {
-    question: "Subject/category ?",
+    question: "Subject/category?",
     incorrectAnswers: [
       "Mathematics",
       "History",
       "Science",
     ],
     correctAnswer: "Art",
+    control: true
   },
 
   {
